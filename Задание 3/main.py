@@ -1,46 +1,47 @@
-def choice1(a, b):
+def select1(a, b):
     if not a and not b :
-        print('Ошибка!Вы не задали значения. Задайте их')
+        print('Значения не введены. Повторите Попытку :)')
     else :
-        print("Операция выполнена, результат =", a * b )
+        print("Результат =", a * b )
 
 
-def choice2(a, b):
+def select2(a, b):
     if not a and not b :
-        print('Ошибка! Вы не задали значения. Задайте их')
+        print('Значения не введены. Повторите попытку :)')
     elif (b == 0):
-        print('Ошибка! На ноль делить нельзя')
+        print('На ноль делить НЕЛЬЗЯ!')
     else :
-        print('Операция выполнена, результат = ' , a / b)
+        print('Результат = ' , a / b)
 
 
-def read():
-    return (int(input('Введите значение A: ')), int(input('Введите значение B: ')))
+def select3():
+    return (int(input('Задайте значение A: ')), int(input('Задайте значение B: ')))
 
 
 userChoice = 0
 a, b = False, False
 
 print('Меню:')
+
 print('1. Введите значения A и B')
 print('2. Умножить значения A и B')
-print('3. Разделить A на B')
+print('3. Разделить значения A и B')
 print('4. Выход')
 print('Выберите опцию:')
 
 while userChoice != 4:
         userChoice = int(input())
         if userChoice == 1:
-            a,b = read()
+            a,b = select3()
         elif userChoice == 2:
-            choice1(a,b)
+            select1(a,b)
         elif userChoice == 3:
-            choice2(a,b)
+            select2(a,b)
         elif userChoice == 4 :
-            print('Вы вышли из программы!До Свидания')
+            print('Был произведен выход из программы. Ещё увидимся :)')
             break
         else:
-            print('Ошибка. Выберите существующую опцию')
+            print('Ошибка. Такой опции не существует. Повторите попытку :)')
 
         print('Меню:')
         print('1. Введите значения A и B')
